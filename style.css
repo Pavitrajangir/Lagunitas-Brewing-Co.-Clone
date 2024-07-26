@@ -1,0 +1,1134 @@
+body{
+    width: 100%;
+    height: 100%;
+    background-color: #f3f0e7;
+    overflow: hidden;
+}
+
+
+.main{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #f5f2e9;
+}
+
+.nav-top{
+    margin-top: 2vw;
+    height: 10vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 3px solid #000;
+}
+
+.image-container {
+    position: relative;
+    margin-right: 10vw;
+    margin-left: 20vw;
+    width: 250px;
+    margin-bottom: 7vw;
+}
+
+.nav-icons {
+    display: flex;
+    gap: 20px;
+    padding-left: 2vw;
+    font-size: 1.5vw;
+    margin-bottom: 6vw;
+}
+
+.icon-link {
+    text-decoration: none; 
+    color: inherit; 
+    margin-left: 3.5vw;
+    margin-top: 0.7vw;
+}
+
+.menu-summary {
+    cursor: pointer; /* Pointer cursor for clickable summary */
+    display: flex;
+}
+
+.menu-details {
+    position: fixed;
+    z-index: 1000;
+}
+
+/* Menu content styling */
+.menu-content {
+    background-color: #000000;
+    text-align: center;
+    padding-top: 4vw;
+    padding-bottom: 3vw;
+    margin-top: 4vw;
+    max-height: 50vh;
+    overflow-y: auto;
+    border-bottom: 1px solid;
+}
+
+.menu-item {
+    display: block;
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    
+}
+
+.menu-item h1{
+    font-size: 6vw;
+    line-height: 1px;
+    letter-spacing: -0.4vw;
+    padding-right: 4vw;
+    padding-left: 2vw;
+    font-family: druk, sans-serif;
+    font-weight: 900;
+    transition: color 0.3s ease;
+
+}
+
+.menu-item h1:hover{
+    color:red
+}
+
+#menu1{
+    border-bottom: 1px solid #fff;
+}
+
+/* Show menu content when details is open */
+.menu-details[open] .menu-content {
+    display: block; /* Show menu content when details is open */
+}
+
+.Sign{
+    color: #ffffff;
+    font-family: yank, cursive;
+    letter-spacing: -0.1vw;
+}
+
+.sign-in-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+    margin-left: 2vw;
+    margin-right: 6vw;
+}
+
+.sign-in-form input {
+    width: 100%;
+    background-color: #ffffff;
+    padding: 12px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.sign-in-form button {
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #ff6600;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.image-container img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: opacity 0.3s ease, transform 0.5s ease;
+    width: 100%;
+    height: auto;
+}
+
+.first-image {
+    opacity: 1;
+    z-index: 1;
+    transform: translateY(0);
+    transform: scale(1);
+}
+
+.second-image {
+    z-index: 2;
+    margin-top: -6vw;
+    transform: scale(0.7);
+    opacity: 0;
+    transform: translateY(10%);
+}
+
+.image-container:hover .first-image {
+    opacity: 1;
+}
+
+.image-container:hover .second-image {
+    opacity: 1;
+    transform: translateY(0);
+    transform: scale(0.5);
+}
+
+
+.nav-top button{
+    padding: 7px 16px;
+    font-family: yank, cursive;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: 800;
+    color: #fff;
+    background-color: rgb(199, 29, 29);
+    margin-right: 2vw;
+    margin-bottom: 4vw;
+}
+
+
+#page1{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    /* overflow: hidden; */
+}
+
+.left{
+    width: 40%;
+    height: 100%;
+}
+
+.left img{
+    height: 800px;
+    width: 700px;
+    padding-left: 2vw;
+}
+
+.right{
+    width: 60%;
+    height: 100%;
+    padding-top: 15vw;
+    padding-left: 10vw;
+}
+
+.right a{
+    text-decoration: none;
+}
+
+.right h1{
+    text-transform: uppercase;
+    font-size: 6.5vw;
+    font-weight: 900;
+    line-height: 6vw;
+    letter-spacing: -0.6vw;
+    color: #272727;
+    font-family: druk, sans-serif;
+    background-image: url(texture.png);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-color: black;
+    -webkit-font-smoothing: antialiased;
+}
+
+.right p{
+    text-transform: uppercase;
+    color: #272727;
+    font-size: 2.5vw;
+    letter-spacing: -0.1vw;
+    font-weight: 900;
+    font-family: sans-serif;
+    line-height: 2.3vw;
+    padding-left: 2vw;
+
+}
+
+.right button{
+    padding: 15px 20px;
+    font-family: yank, cursive;
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: 800;
+    color: #fff;
+    background-color: rgb(0, 0, 0);
+    margin-left: 4vw;
+}
+
+#main2{
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    margin-top: 10vw;
+    overflow: hidden;
+}
+
+#bottle{
+    position: absolute;
+    height: 95vh;
+    top: 0;
+    left: 38%;
+    z-index: 990;
+    border-image: 0 0 2vmax black ;
+}
+
+#bottlecopy{
+    display: none;
+
+}
+
+#page2{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    margin-top: 4vw;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+#page2 h1{
+    width: 60vw;
+    background-color: rgb(153, 13, 13);
+    font-family: druk, sans-serif;
+    font-size: 13vw;
+    font-weight: 700;
+    text-align: center;
+    word-spacing: -1.5vw;
+    text-transform: uppercase;
+    line-height: 12vw;
+    background-image: url(texture.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-font-smoothing: antialiased;
+}
+
+#page2-img{
+    height: 15vh;
+    position: absolute;
+    top: 17%;
+    left: 34.5%;
+    transform: rotate(-30);
+}
+
+#page3{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* padding: 0 4.1vw 0 10vw; */
+}
+
+#part1{
+    width: 20vw;
+    height: 79vh;
+    margin-left: 6vw;
+}
+
+#part1 h3{
+    font-family: dancing script;
+    margin-bottom: 12px;
+}
+
+#part1 h1{
+    width: 25vw;
+    height: 30vh;
+    font-size: 7vw;
+    line-height: 14vh;
+    font-weight: 500;
+    font-family: 'Anton', sans-serif;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+    word-spacing: -1vmax;
+    background-image: url(texture.png);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-color: black;
+    -webkit-font-smoothing: antialiased;
+}
+
+#part1 p{
+    font-family: popins;
+    color: #111;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 22px;
+    margin-bottom: 15px;
+}
+
+#part1 button{
+    padding: 10px 20px;
+    font-family: "druk heavy";
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: 800;
+    line-height: 20px;
+    white-space: nowrap;
+    background-color: black;
+    border-style: none;
+    cursor: pointer;
+    color: #fff;
+}
+
+#part2{
+    width: 26.5vw;
+    height: 75vh;
+    padding: 1.5vmax 3.5vmax;
+    /* line-height: 1vw; */
+    margin-right: 5vw;
+    margin-top: 5vw;
+    border: 0.2vmax solid black;
+    box-shadow: 0 0 0.2vmax black;
+    font-family: "druk heavy";
+}
+
+#part2 h3{
+    font-size: 15px;
+    margin-bottom: 3px;
+    font-weight: 600;
+}
+
+#part2 h5{
+    font-size: 13px;
+    margin-bottom: 6px;
+    font-weight: 600;
+    color: #666;
+}
+
+#box{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-top: 0.2vmax solid black;
+    margin-bottom: 1vh;
+}
+
+#part2 p{
+    font-size: 10px;
+    width: 12vw;
+    color: #111;
+    line-height: 13px;
+    font-weight: 600;
+}
+
+#box h2{
+    font-size: 40px;
+    font-family: "druk heavy";
+
+}
+
+#box h2 span{
+    font-size: 30px;
+}
+
+#page4{
+    width: 100vw;
+    height: 110vh;
+}
+
+#page4 h1{
+    width: 85vw;
+    font-size: 18.3vw;
+    line-height: 18.5vw;
+    font-weight: 500;
+    font-family: 'Anton', sans-serif;
+    text-transform: uppercase;
+    background: url(texture.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-color: rgb(177, 29, 29);
+}
+
+#page-text{
+    display: flex;
+}
+
+#page4-text-part1 a img{
+    width: 25vw;
+    margin-top: 3vh;
+}
+
+
+#page4-text-part1 h5{
+    width: 20vw;
+    font-size: 2vw;
+    margin-top: 3vh;
+    margin-right: 25vw;
+    line-height: 4vh;
+    font-family: Gilroy;
+}
+
+#page4-text-part2 h5{
+    width: 30vw;
+    font-size: 1vmax;
+    font-family: 'Dosis', sans-serif;
+    font-weight: 100;
+}
+
+#page4-text-part2 h2{
+    margin-top: 2vmax;
+    font-family: 'Anton', sans-serif;
+    font-size: 1.5vmax;
+    font-weight: 100;
+    letter-spacing: 0.85vmax;
+}
+
+#page4-text-part2 p{
+    margin-top: 3vh;
+    font-family: 'Dosis', sans-serif;
+    font-weight: 100;
+}
+
+#page5{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    position: relative;
+    margin-top: 10vw;
+}
+
+#page5-color-image1{
+    width: 20vw;
+    margin: 0vh 0 0 20vh;
+}
+
+#page5-color-image1-text{
+    width: 13vw;
+    position: absolute;
+    top: 5%;
+    left: 15%;
+    color: #fff;
+    text-align: center;
+}
+
+#page5-color-image1-text h4{
+    width: 8vw;
+    margin-bottom: 1vh;
+    margin-left: 3vmax;
+    font-family: 'Anton', sans-serif;
+    border-bottom: 0.2vmax solid #000;
+    font-weight: 100;
+    letter-spacing: 0.1vmax;
+    text-transform: uppercase;
+}
+
+#page5-color-image2{
+    width: 21vw;
+    margin: 26vh 0 0 -6vh;
+}
+
+#page5-color-image2-text{
+    width: 13vw;
+    position: absolute;
+    top: 32%;
+    left: 33%;
+    color: #fff;
+    text-align: center;
+}
+
+#page5-color-image2-text h4{
+    width: 4vw;
+    margin-left: 5vmax;
+    font-family: 'Anton', sans-serif;
+    border-bottom: 0.2vmax solid #000;
+    font-weight: 100;
+    letter-spacing: 0.1vmax;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+#page5-color-image3{
+    width: 25vw;
+    margin: 20vh 0 0 40vh;
+}
+
+#page5-color-image3-text{
+    width: 15vw;
+    position: absolute;
+    top: 30%;
+    left: 74%;
+    color: #fff;
+    text-align: center;
+}
+
+#page5-color-image3-text h4{
+    width: 8vw;
+    margin-bottom: 1vh;
+    margin-left: 3.5vmax;
+    text-transform: uppercase;
+    font-family: 'Anton', sans-serif;
+    border-bottom: 0.2vmax solid #000;
+    font-weight: 100;
+    letter-spacing: 0.1vmax;
+    text-align: center;
+}
+
+#page5-color-image4{
+    width: 16vw;
+    height: 50vh;
+    margin: 45vh 0 0 -165vh;
+    transform: rotate(-17deg);
+}
+
+#page6{
+    width: 100vw;
+    height: 110vh;
+    padding: 0 0 0 0 ;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+}
+
+#page6 h5{
+    font-size: 2.5vmax;
+    font-family: Gilroy;
+}
+
+#page6 h1{
+    width: 30vw;
+    text-transform: uppercase;
+    font-family: 'Anton', sans-serif;
+    font-size: 600;
+    font-size: 6.5vw;
+    background: url(texture.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-color: black;
+}
+
+#page6-image-box{
+    width: 100vw;
+    height: 85vh;
+    padding: 0 3vw 0 5vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly; 
+}
+
+#page6-bottle{
+    width: 15vw;
+    height: 60vh;
+    justify-content: center;
+}
+
+#page6-bottle h4{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+    font-family: Gilroy;
+}
+
+#page6-bottle img{
+    width: 15vw;
+}
+
+#image11{
+    height: 48vh;
+}
+
+#image22{
+    transform: rotate(-15deg);
+}
+
+#image33{
+    height: 47vh;
+    opacity: 0;
+    transform: rotate(-15deg);
+}
+
+#image44{
+    transform: rotate(-15deg);
+}
+
+#image55{
+    transform: rotate(-15deg);
+}
+
+#page6-bottle h4{
+    font-family: 'dosis', sans-serif;
+}
+
+#page7{
+    width: 100vw;
+    height: 70vh;
+    margin-top: 12vw;
+    display: flex;
+    gap: 30px;
+    padding: 0 0vw 00 9vw;
+}
+
+#page7 img{
+    width: 50vw;
+    height: 62vh;
+}
+
+#page7-part2{
+    pad: 0 4vw 0 4vw;
+    width: 40vw;
+    height: 62vh;
+}
+
+#page7-part2 h5{
+    font-size: 2vmax;
+    font-family: Gilroy;
+}
+
+#page7-part2 h1{
+    margin-top: 3vh;
+    width: 30vw;
+    font-family: 'Anton', sans-serif;
+    font-size: 4vw;
+    font-weight: 100;
+    line-height: 9.5vh;
+    letter-spacing: 0.5vw;
+    text-transform: uppercase;
+}
+
+#page7-part2 p{
+    margin-top: 3vh;
+    font-weight: 400;
+    font-family: 'Dosis', sans-serif;
+    color: #111;
+}
+
+#page7-part2 button{
+    margin-top: 3vh;
+    font-size: 1.2vmax;
+    padding: 0.8vmax 1.5vmax;
+    font-family: 'Anton', sans-serif;
+    text-transform: uppercase;
+    font-weight: 100;
+    color: #fff;
+    background-color: #000;
+    border-style: none;
+    cursor: pointer;
+}
+
+#page8{
+    width: 100%;
+    height: 50vh;
+    text-align: center;
+    justify-content: center;
+}
+
+#page8 h1{
+    position: relative;
+    color: #000;
+    font-size: 10vw;
+    font-weight: 800;
+    text-transform: uppercase;
+    line-height: 8vw;
+    letter-spacing: -0.6vw;
+    font-family: druk, sans-serif;
+    background-image: url(texture.png);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-color: black;
+    -webkit-font-smoothing: antialiased;
+}
+
+#page9{
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    /* justify-content: space-between; */
+}
+
+#page9 a img{
+    height: 600px;
+    margin-left: 2vw;
+    margin-top: 10vw;
+}
+
+#page9 a{
+    text-decoration: none;
+}
+
+#page9 a h1{
+    padding-bottom: 8vw;
+    margin-left: 11vw;
+    text-transform: uppercase;
+    font-weight: 800;
+    line-height: 1.8vw;
+    color: #000;
+    font-family: druk, sans-serif;
+    transition: color 0.3s ease;
+}
+
+#page10 a h1:hover{
+    color: rgb(177, 29, 29);
+}
+
+#page9 a h1 p{
+    font-size: 1vw;
+    padding-top: 1vw;
+    font-family: 'Dosis', sans-serif;
+    margin-right: 3vw;
+}
+
+#page9 a h1 button{
+    padding: 7px 16px;
+    font-family: druk, sans-serif;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: 800;
+    color: #fff;
+    background-color: rgb(199, 29, 29);
+    margin-right: 2vw;
+    margin-bottom: 4vw;
+}
+
+#page10{
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    margin-top: 10vw;
+}
+
+#page10 a img{
+    height: 600px;
+    margin-left: 2vw;
+    margin-top: 10vw;
+}
+
+#page10 a{
+    text-decoration: none;
+}
+
+#page10 a h1{
+    padding-bottom: 8vw;
+    margin-left: 9vw;
+    text-transform: uppercase;
+    font-weight: 800;
+    line-height: 1.8vw;
+    color: #000;
+    font-family: druk, sans-serif;
+    transition: color 0.3s ease;
+}
+
+#page10 a h1:hover{
+    color: rgb(177, 29, 29);
+}
+
+#page10 a h1 p{
+    font-size: 1vw;
+    padding-top: 1vw;
+    font-family: 'Dosis', sans-serif;
+    margin-right: 5vw;
+}
+
+#page10 a h1 button{
+    padding: 7px 16px;
+    font-family: druk, sans-serif;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: 800;
+    color: #fff;
+    background-color: rgb(199, 29, 29);
+    margin-right: 2vw;
+    margin-bottom: 4vw;
+}
+
+#page11{
+    width: 100vw;
+    height: 70vh;
+    margin-top: 12vw;
+    display: flex;
+    gap: 30px;
+    padding: 0 0vw 00 4vw;
+}
+
+#page11 img{
+    width: 50vw;
+    height: 72vh;
+}
+
+#page11-part2{
+    pad: 0 4vw 0 4vw;
+    width: 40vw;
+    height: 62vh;
+}
+
+#page11-part2 h5{
+    font-size: 2vmax;
+    font-family: yank, cursive;
+}
+
+#page11-part2 h1{
+    margin-top: 3vh;
+    width: 30vw;
+    font-family: 'Anton', sans-serif;
+    font-size: 4vw;
+    font-weight: 100;
+    line-height: 9.5vh;
+    letter-spacing: 0.5vw;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+}
+
+#page11-part2 h1:hover{
+    color: rgb(177, 29, 29);
+}
+
+#page11-part2 p{
+    margin-top: 3vh;
+    font-weight: 400;
+    font-family: 'Dosis', sans-serif;
+    color: #111;
+}
+
+#page11-part2 button{
+    margin-top: 3vh;
+    font-size: 1.2vmax;
+    padding: 0.8vmax 1.5vmax;
+    font-family: 'Anton', sans-serif;
+    text-transform: uppercase;
+    font-weight: 100;
+    color: #fff;
+    background-color: #000;
+    border-style: none;
+    cursor: pointer;
+}
+
+#page12{
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    gap: 15vw;
+    margin-top: 5vw;
+}
+
+#page12 img{
+    height: 350px;
+}
+
+#page12 h1{
+    font-size: 4vw;
+    line-height: 3vw;
+}
+
+#page12 h1 p{
+    font-family: yank, cursive;
+    font-size: 1.7vw;
+}
+
+#page13{
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    gap: 1vw;
+    margin-left: 25vw;
+    position: relative;
+}
+
+.image{
+    position: relative;
+}
+
+.img1{
+    height: 500px;
+}
+
+.img2{
+    height: 500px;
+}
+
+.text{
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.5); 
+    padding-left: 7vw;
+    padding-right: 7vw;
+    border-radius: 5px;
+}
+
+.text h1{
+    font-size: 2.5vw;
+    font-family: druk, sans-serif;
+    transition: color 0.3s ease;
+}
+
+.text h1:hover{
+    color: rgb(177, 29, 29);
+}
+
+.text p{
+    font-family: yank, cursive;
+}
+
+#page14{
+    width: 100vw;
+    height: 100%;
+    margin-top: 12vw;
+    display: flex;
+    gap: 30px;
+    padding: 0 0vw 00 4vw;
+}
+
+#page14-part1 img{
+    width: 50vw;
+    height: 90vh;
+}
+
+#page14-part2{
+    pad: 0 4vw 0 4vw;
+    width: 40vw;
+    height: 62vh;
+}
+
+#page14-part2 h5{
+    font-size: 2vmax;
+    font-family: yank, cursive;
+}
+
+#page14-part2 h1{
+    margin-top: 3vh;
+    width: 30vw;
+    font-family: 'Anton', sans-serif;
+    font-size: 4vw;
+    font-weight: 100;
+    line-height: 9.5vh;
+    letter-spacing: 0.5vw;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+}
+
+#page14-part2 h1:hover{
+    color: rgb(177, 29, 29);
+}
+
+#page14-part2 p{
+    margin-top: 3vh;
+    font-weight: 400;
+    font-family: 'Dosis', sans-serif;
+    color: #111;
+}
+
+#page14-part2 button{
+    margin-top: 3vh;
+    font-size: 1.2vmax;
+    padding: 0.8vmax 1.5vmax;
+    font-family: 'Anton', sans-serif;
+    text-transform: uppercase;
+    font-weight: 100;
+    color: #fff;
+    background-color: #000;
+    border-style: none;
+    cursor: pointer;
+}
+
+#page14-part2 img{
+    height: 200px;
+    width: 200px;
+    padding-left: 20vw;
+    /* padding-top: 5vw; */
+    padding-bottom: 4vw;
+}
+
+#page15{
+    width: 100%;
+    height: 40vh;
+    /* display: none; */
+    text-align: center;
+}
+
+#page15 p{
+    font-family: yank, cursive;
+    font-weight: 200;
+}
+
+#page16{
+    width: 100%;
+    height: 100vh;
+    background-color: #000;
+    display: flex;
+}
+
+.left a img{
+    height: 150px;
+    width: 200px;
+    padding-left: 4vw;
+    padding-top: 5vw;
+}
+
+.middle{
+    margin-top: 6vw;
+}
+
+.middle a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.middle a h1{
+    font-size: 5vw;
+    font-weight: 800;
+    text-transform: uppercase;
+    line-height: 1.4vw;
+    font-family: 'Anton', sans-serif;
+    transition: ease color 0.3s;
+}
+
+.middle a h1:hover{
+    color: rgb(177, 29, 29);
+}
+
+.end h1{
+    color: #ffffff;
+    font-family: yank, cursive;
+    letter-spacing: -0.1vw;
+    padding-left: 8vw;
+    padding-top: 4vw;
+}
+    
+.sign-in-form input {
+    width: 100%;
+    background-color: #ffffff;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    margin-left: 12vw;
+}
+    
+.sign-in-form button {
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #ff6600;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#page17{
+    width: 100%;
+    height: 100vh;
+}
+
